@@ -28,7 +28,7 @@ body {
 }
 
 .post-title {
-	font-weight: 200;
+	font-weight: 400;
 	font-size: 48px;
 }
 
@@ -47,6 +47,7 @@ body {
 	max-width: $post-width;
 	margin: 0 auto;
 	padding: 2em 1em;
+	font-weight: 200;
 
 	a {
 		color: #5EB0BF;

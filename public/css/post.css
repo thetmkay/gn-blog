@@ -144,7 +144,7 @@ html, body {
 
 /* line 30, ../../src/scss/post.scss */
 .post-title {
-  font-weight: 200;
+  font-weight: 400;
   font-size: 48px;
 }
 
@@ -163,22 +163,23 @@ html, body {
   max-width: 40em;
   margin: 0 auto;
   padding: 2em 1em;
+  font-weight: 200;
 }
-/* line 51, ../../src/scss/post.scss */
+/* line 52, ../../src/scss/post.scss */
 .post-text a {
   color: #5EB0BF;
   text-decoration: none;
 }
-/* line 55, ../../src/scss/post.scss */
+/* line 56, ../../src/scss/post.scss */
 .post-text a:visited, .post-text a:active {
   color: #396B75;
 }
-/* line 59, ../../src/scss/post.scss */
+/* line 60, ../../src/scss/post.scss */
 .post-text a:hover {
   text-decoration: underline;
 }
 
-/* line 67, ../../src/scss/post.scss */
+/* line 68, ../../src/scss/post.scss */
 .post-ftr {
   width: 100%;
   background-color: #4EA0AC;

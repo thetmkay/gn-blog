@@ -211,6 +211,20 @@ html, body {
 }
 
 /* line 86, ../../src/scss/app.scss */
+.blog-tease-link {
+  color: #5EB0BF;
+  text-decoration: none;
+}
+/* line 91, ../../src/scss/app.scss */
+.blog-tease-link:visited, .blog-tease-link:active {
+  color: #4EA0AC;
+}
+/* line 95, ../../src/scss/app.scss */
+.blog-tease-link:hover {
+  text-decoration: underline;
+}
+
+/* line 100, ../../src/scss/app.scss */
 .post-link {
   text-transform: lowercase;
   font-weight: bold;
@@ -221,12 +235,12 @@ html, body {
   color: #5EB0BF;
   border-radius: 5px;
 }
-/* line 96, ../../src/scss/app.scss */
+/* line 110, ../../src/scss/app.scss */
 .post-link:hover {
   color: #71D4E6;
 }
 
-/* line 102, ../../src/scss/app.scss */
+/* line 116, ../../src/scss/app.scss */
 .post-item {
   text-align: left;
   display: block;
@@ -236,15 +250,15 @@ html, body {
   z-index: 1;
   border: solid 3px white;
 }
-/* line 112, ../../src/scss/app.scss */
+/* line 126, ../../src/scss/app.scss */
 .post-item, .post-item:hover, .post-item:active, .post-item:visited {
   color: black;
 }
-/* line 119, ../../src/scss/app.scss */
+/* line 133, ../../src/scss/app.scss */
 .post-item:hover, .post-item:active {
   border: solid 3px #71D4E6;
 }
-/* line 123, ../../src/scss/app.scss */
+/* line 137, ../../src/scss/app.scss */
 .post-item:hover .post-cover, .post-item:active .post-cover {
   display: flex;
   -webkit-animation-name: fadeout;
@@ -288,7 +302,7 @@ html, body {
     opacity: 0.1;
   }
 }
-/* line 144, ../../src/scss/app.scss */
+/* line 158, ../../src/scss/app.scss */
 .test .post-cover {
   display: flex;
   opacity: 0;
@@ -299,7 +313,7 @@ html, body {
   transition: opacity 1s ease-in 2s;
 }
 
-/* line 149, ../../src/scss/app.scss */
+/* line 163, ../../src/scss/app.scss */
 .post-cover {
   position: absolute;
   left: 0;
@@ -313,7 +327,7 @@ html, body {
   text-align: center;
 }
 
-/* line 162, ../../src/scss/app.scss */
+/* line 176, ../../src/scss/app.scss */
 .post-cover-text {
   margin: auto;
   font-weight: bold;
@@ -324,26 +338,26 @@ html, body {
   font-size: 36px;
 }
 @media (min-width: 450px) {
-  /* line 162, ../../src/scss/app.scss */
+  /* line 176, ../../src/scss/app.scss */
   .post-cover-text {
     font-size: 48px;
   }
 }
 
-/* line 175, ../../src/scss/app.scss */
+/* line 189, ../../src/scss/app.scss */
 .post-item, .blog-lead, .post-lead {
   max-width: 600px;
   margin: 0 auto;
   padding: 1em;
 }
 
-/* line 182, ../../src/scss/app.scss */
+/* line 196, ../../src/scss/app.scss */
 .post-title {
   font-size: 36px;
   font-weight: bold;
 }
 
-/* line 187, ../../src/scss/app.scss */
+/* line 201, ../../src/scss/app.scss */
 .post-date {
   color: #86989c;
 }

@@ -83,6 +83,20 @@ $content-width: 600px;
 */
 }
 
+.blog-tease-link {
+	
+	color: #5EB0BF;
+	text-decoration:none;
+
+	&:visited, &:active {
+		color: #4EA0AC;
+	}
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
 .post-link {
   text-transform: lowercase;
   font-weight: bold;
