@@ -1,0 +1,110 @@
+/* line 1, ../../node_modules/gn_components/scss/gn/footer.scss */
+.footer {
+  padding-top: 10px;
+  width: 100%;
+  font-family: 'Open Sans';
+  position: absolute;
+  bottom: 0;
+  height: 5em;
+}
+
+/* line 10, ../../node_modules/gn_components/scss/gn/footer.scss */
+html {
+  height: 100%;
+}
+
+/* line 14, ../../node_modules/gn_components/scss/gn/footer.scss */
+body {
+  min-height: 100%;
+  padding-bottom: 5em;
+  position: relative;
+}
+
+/* line 20, ../../node_modules/gn_components/scss/gn/footer.scss */
+.ftr-section {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* line 27, ../../node_modules/gn_components/scss/gn/footer.scss */
+.ftr-section.links {
+  padding-bottom: 1em;
+}
+
+/* line 31, ../../node_modules/gn_components/scss/gn/footer.scss */
+.ftr-section .link {
+  border: none;
+  color: #aaa;
+}
+/* line 34, ../../node_modules/gn_components/scss/gn/footer.scss */
+.ftr-section .link:hover {
+  color: #ccc;
+  border: none;
+}
+
+/* line 41, ../../node_modules/gn_components/scss/gn/footer.scss */
+.ftr-title {
+  font-size: 10px;
+  font-weight: 400;
+  display: inline-block;
+}
+/* line 45, ../../node_modules/gn_components/scss/gn/footer.scss */
+.ack .ftr-title {
+  text-align: left;
+  font-size: 12px;
+}
+
+/* line 51, ../../node_modules/gn_components/scss/gn/footer.scss */
+.ftr-link-mod {
+  font-size: 14px;
+  display: inline-block;
+}
+
+/* line 57, ../../node_modules/gn_components/scss/gn/footer.scss */
+.ftr-link {
+  font-weight: 400;
+  padding-left: 10px;
+}
+
+/* line 62, ../../node_modules/gn_components/scss/gn/footer.scss */
+.ftr-link:hover {
+  text-decoration: underline;
+}
+
+/* line 66, ../../node_modules/gn_components/scss/gn/footer.scss */
+.ftr-link.border-right {
+  border-right: solid 1px #aaa;
+  padding-right: 10px;
+}
+
+/* line 71, ../../node_modules/gn_components/scss/gn/footer.scss */
+.ack .ftr-link {
+  font-weight: 400;
+}
+
+@media print {
+  /* line 76, ../../node_modules/gn_components/scss/gn/footer.scss */
+  .footer {
+    display: none;
+  }
+}
+/* line 850, ../../node_modules/gn_components/scss/gn/_mixins.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* line 6, ../../src/scss/post.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Title</title>
+		<link rel="stylesheet" type="text/css" href="css/app.css">
+	</head>
+	<body>
+		<div class="post-list">
+			{% for post in posts %}
+			<div class="post-item">
+				<a href="posts/{{post.url}}">{{ post.settings.title }}</a>
+				<span>{{ post.metadata.modified | date }}</span>
+			</div>
+			{% endfor %}
+		</div>
+		{% include 'footer.html' %}
+		<script src='js/jquery.js'></script>
+		<script src='js/app.js'></script>
+	</body>
+</html>
