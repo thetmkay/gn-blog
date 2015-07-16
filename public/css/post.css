@@ -101,10 +101,87 @@ body {
   width: auto;
 }
 
-/* line 6, ../../src/scss/post.scss */
+/* line 4, ../../src/scss/_footer.scss */
+.page-container {
+  padding-bottom: 5em;
+  height: 100%;
+}
+
+/* line 9, ../../src/scss/_footer.scss */
+.ftr-link {
+  text-decoration: none;
+}
+/* line 11, ../../src/scss/_footer.scss */
+.ftr-link, .ftr-link:hover, .ftr-link:active, .ftr-link:visited {
+  color: #4EA0AC;
+}
+/* line 15, ../../src/scss/_footer.scss */
+.ftr-link:hover {
+  text-decoration: underline;
+}
+
+/* line 8, ../../src/scss/post.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 12, ../../src/scss/post.scss */
 html, body {
   width: 100%;
-  height: 100%;
   margin: 0;
   padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* line 22, ../../src/scss/post.scss */
+.post-hdr {
+  width: 100%;
+  max-width: 40em;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1em;
+}
+
+/* line 30, ../../src/scss/post.scss */
+.post-title {
+  font-weight: 200;
+  font-size: 48px;
+}
+
+/* line 35, ../../src/scss/post.scss */
+.post-date {
+  font-weight: normal;
+  padding: 5px 10px;
+  color: white;
+  background-color: #4EA0AC;
+}
+
+/* line 44, ../../src/scss/post.scss */
+.post-text {
+  width: 100%;
+  font-size: 18px;
+  max-width: 40em;
+  margin: 0 auto;
+  padding: 2em 1em;
+}
+/* line 51, ../../src/scss/post.scss */
+.post-text a {
+  color: #5EB0BF;
+  text-decoration: none;
+}
+/* line 55, ../../src/scss/post.scss */
+.post-text a:visited, .post-text a:active {
+  color: #396B75;
+}
+/* line 59, ../../src/scss/post.scss */
+.post-text a:hover {
+  text-decoration: underline;
+}
+
+/* line 67, ../../src/scss/post.scss */
+.post-ftr {
+  width: 100%;
+  background-color: #4EA0AC;
+  padding: 2em;
+  margin-bottom: 2em;
 }

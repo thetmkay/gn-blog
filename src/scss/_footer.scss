@@ -1,0 +1,19 @@
+.footer {
+}
+
+.page-container{
+	padding-bottom: 5em;
+	height: 100%;
+}
+
+.ftr-link {
+	text-decoration:none;
+	&, &:hover, &:active, &:visited{
+		color:#4EA0AC;
+	}
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+}

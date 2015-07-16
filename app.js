@@ -21,15 +21,16 @@ var view_paths = [
 
 var env = new nunjucks.Environment(new nunjucks.FileSystemLoader(view_paths));
 
-env.addFilter('date', function(string) {
+env.addFilter('date', function(string,sep) {
 	var date = new Date(string);
-	
-	return date.getFullYear() + '-' + (date.getMonth()+1)+'-'+ date.getDate();
+	var month = (date.getMonth()+1);
+	var ext_month = month < 10 ? '0' + month : month; 
+	return date.getFullYear() + sep + ext_month + sep + date.getDate();
 	
 });
 
 env.addFilter('lead', function(string) {
-	return string;
+	return string.substr(0,600);
 });
 
 
@@ -74,6 +75,10 @@ passport.use(new BasicStrategy(function(username,password,done){
 }));
 
 app.use(passport.initialize());
+
+app.get('/posts', function(req,res) {
+	res.redirect('/');
+});
 
 app.get('/posts/:name', function(req,res) {
 	var name = path.join('final',req.params.name) + '.md';

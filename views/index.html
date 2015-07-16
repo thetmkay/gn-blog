@@ -6,28 +6,28 @@
 		<link rel="stylesheet" type="text/css" href="css/app.css">
 	</head>
 	<body>
+		<div class="page-container">
+		<div class="blog-hdr">
+			<div class="blog-label">Blog</div>
+		</div>
+		<div class="blog-lead">
+			<div class="blog-tease">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </div>
+		</div>
 		<header class="posts-hdr">
-			<span class="posts-title">Recent Posts:</span>
+			<span class="posts-label">Recent Posts:</span>
 		</header>
-		<section class="posts-list">
+		<main class="posts-list">
+			
 			{% for post in posts %}
-			{% if loop.first %}
-			<div class="post-lead">
+						<a class="post-item" href="posts/{{post.url}}">
 				<div class="post-title">{{ post.settings.title }}</div>
-				<div class="post-date">{{ post.metadata.modified | date }}</div>
-				<div class="post-tease">{{ post.text | lead }}</div>
-				<a class="post-link"  href="posts/{{post.url}}">Read Post</a>
-			</div>
-			{% else %}
-			<a class="post-item" href="posts/{{post.url}}">
-				<div class="post-title">{{ post.settings.title }}</div>
-				<div class="post-date">{{ post.metadata.modified | date }}</div>
+				<div class="post-date">{{ post.metadata.modified | date('-') }}</div>
 				<div class="post-cover"><span class="post-cover-text">Read Post</span></div>
 			</a>
-			{% endif %}
 			{% endfor %}
-		</section>
+		</main>
 		{% include 'footer.html' %}
+		</div>
 		<script src='js/jquery.js'></script>
 		<script src='js/app.js'></script>
 	</body>

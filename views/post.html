@@ -1,13 +1,23 @@
 <!doctype html>
 <html>
 	<head>
-		<title>{{ post.settings.title }}</title>
+		<title>Blog | {{ post.settings.title }}</title>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:700|Open+Sans:400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="post.css">
 	</head>
 	<body>
-		<div>
+		<div class="page-container">
+		<header class="post-hdr">
+			<h1 class="post-title">{{ post.settings.title }}</h1>
+			<span class="post-date">{{ post.metadata.modified | date(' - ') }}</span>
+		</header>
+		<main class="post-text">
 			{{ post.text}}
+		</main>
+		<div class="post-ftr">
+
 		</div>
 		{% include 'footer.html' %}
+		</div>
 	</body>
 </html>
