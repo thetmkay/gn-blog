@@ -120,12 +120,12 @@ body {
   text-decoration: underline;
 }
 
-/* line 8, ../../src/scss/post.scss */
+/* line 9, ../../src/scss/post.scss */
 * {
   box-sizing: border-box;
 }
 
-/* line 12, ../../src/scss/post.scss */
+/* line 13, ../../src/scss/post.scss */
 html, body {
   width: 100%;
   margin: 0;
@@ -133,22 +133,22 @@ html, body {
   font-family: 'Open Sans', sans-serif;
 }
 
-/* line 22, ../../src/scss/post.scss */
+/* line 23, ../../src/scss/post.scss */
 .post-hdr {
   width: 100%;
-  max-width: 40em;
+  max-width: 600px;
   margin: 0 auto;
   text-align: center;
   padding: 1em;
 }
 
-/* line 30, ../../src/scss/post.scss */
+/* line 31, ../../src/scss/post.scss */
 .post-title {
   font-weight: 400;
   font-size: 48px;
 }
 
-/* line 35, ../../src/scss/post.scss */
+/* line 36, ../../src/scss/post.scss */
 .post-date {
   font-weight: normal;
   padding: 5px 10px;
@@ -156,30 +156,75 @@ html, body {
   background-color: #4EA0AC;
 }
 
-/* line 44, ../../src/scss/post.scss */
+/* line 43, ../../src/scss/post.scss */
 .post-text {
   width: 100%;
   font-size: 18px;
-  max-width: 40em;
+  max-width: 600px;
   margin: 0 auto;
-  padding: 2em 1em;
+  padding: 0 1em;
   font-weight: 200;
 }
-/* line 52, ../../src/scss/post.scss */
+/* line 51, ../../src/scss/post.scss */
 .post-text a {
   color: #5EB0BF;
   text-decoration: none;
 }
-/* line 56, ../../src/scss/post.scss */
+/* line 55, ../../src/scss/post.scss */
 .post-text a:visited, .post-text a:active {
   color: #396B75;
 }
-/* line 60, ../../src/scss/post.scss */
+/* line 59, ../../src/scss/post.scss */
 .post-text a:hover {
   text-decoration: underline;
 }
 
-/* line 68, ../../src/scss/post.scss */
+/* line 65, ../../src/scss/post.scss */
+.post-link-mod {
+  display: block;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1em;
+  padding-bottom: 2.5em;
+}
+
+/* line 72, ../../src/scss/post.scss */
+.post-link {
+  font-weight: normal;
+  color: #5EB0BF;
+  text-decoration: none;
+}
+/* line 78, ../../src/scss/post.scss */
+.post-link:visited, .post-link:active {
+  color: #396B75;
+}
+/* line 86, ../../src/scss/post.scss */
+.post-link:before {
+  content: '\2190';
+  padding-right: 5px;
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+/* line 92, ../../src/scss/post.scss */
+.post-link:hover:before {
+  display: inline-block;
+  -moz-transform: translateX(-15px);
+  -ms-transform: translateX(-15px);
+  -webkit-transform: translateX(-15px);
+  transform: translateX(-15px);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+/* line 101, ../../src/scss/post.scss */
 .post-ftr {
   width: 100%;
   background-color: #4EA0AC;

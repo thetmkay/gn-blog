@@ -1,9 +1,10 @@
 @import "gn/footer";
 @import "gn/mixins";
 @import "footer";
+@import "compass/css3";
 
 $small-screen:450px;
-$post-width:40em;;
+$post-width:600px;;
 
 * {
 	box-sizing: border-box;
@@ -39,14 +40,12 @@ body {
 	background-color:#4EA0AC;
 }
 
-
-
 .post-text {
 	width: 100%;
 	font-size: 18px;
 	max-width: $post-width;
 	margin: 0 auto;
-	padding: 2em 1em;
+	padding: 0 1em;
 	font-weight: 200;
 
 	a {
@@ -60,7 +59,41 @@ body {
 		&:hover {
 			text-decoration: underline;
 		}
+	}
+}
 
+.post-link-mod {
+	display: block;
+	max-width: $post-width;
+	margin: 0 auto;
+	padding: 1em;
+	padding-bottom:2.5em;
+}
+.post-link {
+	
+	font-weight: normal;
+	color: #5EB0BF;
+	text-decoration:none;
+
+	&:visited, &:active {
+		color: #396B75;
+	}
+
+	&:hover {
+		//text-decoration: underline;
+	}
+
+	&:before {
+		content:'\2190';
+		padding-right:5px;
+		@include transform(translateX(0));	
+	}
+
+	&:hover:before {
+		display: inline-block;
+		@include transform(translateX(-15px));	
+		@include transition-property(transform);
+		@include transition-duration(0.5s);
 	}
 
 }
