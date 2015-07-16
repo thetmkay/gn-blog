@@ -23,8 +23,6 @@
     "crypto": "0.0.3",
     "dbox": "^0.6.4",
     "express": "^4.9.8",
-    "express-session": "^1.11.3",
-    "express-slash": "^2.0.1",
     "grunt": "^0.4.5",
     "grunt-concurrent": "^2.0.0",
     "grunt-contrib-compass": "^1.0.3",

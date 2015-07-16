@@ -93,5 +93,3 @@ app.get('/', function(req,res) {
         response.render('index', {posts:posts});
     }).bind(null,res));
 });
-
-app.use(require('express-slash')());
