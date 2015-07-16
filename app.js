@@ -24,9 +24,14 @@ var env = new nunjucks.Environment(new nunjucks.FileSystemLoader(view_paths));
 env.addFilter('date', function(string) {
 	var date = new Date(string);
 	
-	return date.getYear() + '-' + (date.getMonth()+1)+'-'+ date.getDate();
+	return date.getFullYear() + '-' + (date.getMonth()+1)+'-'+ date.getDate();
 	
 });
+
+env.addFilter('lead', function(string) {
+	return string;
+});
+
 
 env.express(app);
 
