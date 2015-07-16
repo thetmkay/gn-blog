@@ -29,29 +29,6 @@ env.addFilter('date', function(string) {
 });
 
 env.express(app);
-/*
-var passport = require('passport');
-var DropboxOAuth2Strategy = require('passport-dropbox-oauth2').Strategy;
-
-
-passport.use(new DropboxOAuth2Strategy({
-    clientID:"1i5lfpof8lksm4q", 
-    clientSecret: "gffgqjj900lc415",
-    callbackURL: "http://localhost:3000/auth2/callback"
-  },
-  function(accessToken, refreshToken, profile, done) {
-	console.log('accesstoken');
-    console.log(accessToken);
-	
-	done();
-  }));
-var dbox = require('dbox');
-var dapp = dbox.app({"app_key":"1i5lfpof8lksm4q","app_secret":"gffgqjj900lc415"});
-var Dropbox = require('dropbox');
-var dbClient = new Dropbox.Client({
-    key: "1i5lfpof8lksm4q",
-    secret: "gffgqjj900lc415"
-});*/
 
 var dropbox = require('./lib/dropbox');
 var passport = require('passport'),
@@ -72,8 +49,6 @@ app.set('view engine', 'html');
  * Routes
  */
 
-
-
 passport.serializeUser(function(user, done) {
   done(null, user);
 });
@@ -92,32 +67,8 @@ passport.use(new BasicStrategy(function(username,password,done){
 		done(null,false);
 	}
 }));
+
 app.use(passport.initialize());
-/*
-var reqtoken, client;
-
-var final_files = [];
-
-function isAuthenticated(callback) {
-	return function(req,res) {
-		if(!reqtoken) {
-			console.log('auth');
-			res.redirect('/auth');
-		}
-		else if(!client) {
-			console.log('auth callback');
-			res.redirect('/auth/callback');
-		} else {
-			callback(req,res);
-		}
-	}
-}*/
-
-app.get('/', function(req,res) {
-	dropbox.getFiles('final',(function(response,posts) {
-        response.render('index', {posts:posts});
-    }).bind(null,res));
-});
 
 app.get('/posts/:name', function(req,res) {
 	var name = path.join('final',req.params.name) + '.md';
@@ -137,32 +88,10 @@ app.get('/login', passport.authenticate('local',{session:false}),function(req,re
 	res.render('login');
 });
 
-/*
-app.get('/auth', function(req,res){
-	dapp.requesttoken(function(status, request_token){
-	    res.redirect(request_token.authorize_url + '&oauth_callback=http://localhost:3000/auth/callback');		 reqtoken = request_token;
-		console.log(request_token);
-	})
+app.get('/', function(req,res) {
+	dropbox.getFiles('final',(function(response,posts) {
+        response.render('index', {posts:posts});
+    }).bind(null,res));
 });
 
-app.get('/auth/callback', 
-function(req, res) {
-// Successful authentication, redirect home.
-	dapp.accesstoken(reqtoken, function(status,accesstoken) {
-		console.log(accesstoken);
-		client = dapp.client(accesstoken);
-		res.redirect('/');;
-	}); 
-	
-});
-
-/*
-app.get('/auth2', passport.authenticate('dropbox-oauth2', function(req,res) {
-	res.send({});
-}));
-
-app.get('/auth2/callback', passport.authenticate('dropbox-oauth2', function(req, res) {
-	res.sendJSON({});
-}));*/
-
-
+app.use(require('express-slash')());
